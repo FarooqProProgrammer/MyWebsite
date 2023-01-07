@@ -5,6 +5,7 @@ import Donations from './pages/Donations'
 import Education from './pages/Education'
 import Service from './pages/Service'
 import Course from './pages/Course'
+import CourseCompo from './pages/CourseCompo'
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         <Route path='/Service' element={<Service/>}/>
         <Route path='/Education' element={<Education/>}/>
         <Route path='/Course' element={<Course/>}/>
-        <Route path='/CourseComponent/:id'/>
+        <Route path='/CourseComponent/:id' element={<CourseCompo/>}/>
       </Routes>
     </BrowserRouter>
   )
