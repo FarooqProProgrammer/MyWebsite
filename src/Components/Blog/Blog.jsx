@@ -8,7 +8,8 @@ import {getFirestore, addDoc ,collection,onSnapshot,doc ,getDocs,query} from "fi
 function Blog() {
   const navigate = useNavigate();
   const db = getFirestore(app);
-  const [course,setCourse] = useState([]);
+  const [course,setCourse] = useState('');
+  const [documents, setDocuments] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -31,19 +32,24 @@ function Blog() {
   // ======================= Read Courses =====================================
   async function getData(){
     const q = query(collection(db, "Course"));
-    const data = [...course]
+    const data = [...documents]
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
       console.log(doc.data());
       data.push({id:doc.id,...doc.data()})
-      setCourse(data)
+      console.log(data);
+      console.log(course);
+      setDocuments(data)
+      
     });
+    
+   
+   
 
   }
   useEffect(()=>{
     getData()
- 
 
   },[])
 
@@ -55,7 +61,7 @@ function Blog() {
       <Button  onClick={showModal} className="text-3xl font-medium title-font text-gray-900 mb-12 text-center border-2 border-[#f1c40f] py-3 pb-2 pt-2 pl-3 pr-3 hover:text-[#f1c40f] hover:border-[#000] ">Add New Course</Button>
     </div>
     <div class="flex flex-wrap -m-4">
-      {course.map((item)=>{
+      {documents.map((item)=>{
         return(
     <div class="p-4 md:w-1/2 w-full" onClick={()=> navigate(`/CourseComponent/${item.id}`)}>
         <div class="h-full bg-gray-100 p-8 rounded">
@@ -81,7 +87,8 @@ function Blog() {
 
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <div className="content w-full h-[300px] border-2 border-black flex flex-col justify-around items-center">
-            <input onChange={(e)=> setCourse(e.target.value)} className='w-[80%] h-[60px] border-2 border-black'/>
+            <input placeholder='Enter Course Name' onChange={(e)=> setCourse(e.target.value)} className='w-[80%] h-[60px] border-2 border-black'/>
+            <input placeholder='Enter Course Info' className='w-[80%] h-[60px] border-2 border-black'/>
             <Button onClick={add} className="border-2 border-[#f1c40f] font-black hover:text-[#f1c40f] hover:border-[#000] hover:shadow-lg" width={"300px"} height={"60px"}>ADD COURSE</Button>
         </div>  
       </Modal>
