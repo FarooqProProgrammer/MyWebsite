@@ -13,7 +13,7 @@ const Home = () => {
     <div>
         <Navbar/>
         <Hero/>
-
+        <Gallery/>
         {/* ===================== Course Section ==================== */}
         <div className="w-full h-[100px] border-2 border-[#f1c40f] font-black hover:border-[#000] hover:text-[#f1c40f]  cursor-pointer flex justify-around items-center">
           <h4>Sylani Offers Many Courses For It and Many Fields</h4>
