@@ -39,7 +39,8 @@ const Student = () => {
     const docRef = await addDoc(collection(db, `/Course/${id}/Students`), {
       name: name,
       Email: Email,
-      url:url
+      Phone:Phone
+      // url:url
     });
     console.log("Document written with ID: ", docRef.id)
     }
@@ -107,14 +108,14 @@ const Student = () => {
       >
         <Input  onChange={(e)=> setPhone(e.target.value)}/>
       </Form.Item>
-      <Form.Item
+      {/* <Form.Item
             label="Upload Image"
             name="Upload Image"
             rules={[{ required: true, message: 'Please input your phone number!' }]}
       >
             <Input type='file' onChange={(e)=> setImage(e.target.files[0].name)}/>
       </Form.Item>
-     
+      */}
     
       <Form.Item>
         <Button type="primary" htmlType="submit" onClick={AddStudent}>
