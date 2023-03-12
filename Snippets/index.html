@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            .team-section {
+  padding: 50px 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+.tem_img {
+    width: 50px;
+    height: 50px;
+}
+.tem_img img {
+    width: 100%;
+    height: 100%;
+}
+.team-member img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.team-member h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.team-member p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #999;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #999;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #333;
+}
+
+        </style>
+    <title>Blog</title>
+</head>
+
+<body>
+
+
+    <!-- =================== RESPONSIVE HEADER ========================= -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between flex-wrap py-4">
+                <div class="flex items-center flex-shrink-0">
+                    <a href="/" class="font-bold text-xl text-indigo-600">My Blog</a>
+                </div>
+                <div class="block lg:hidden">
+                    <button id="menu-btn"
+                        class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-700 hover:text-indigo-600 hover:border-indigo-600 focus:outline-none">
+                        <svg class="h-3 w-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path
+                                d="M0 3a3 3 0 013-3h14a3 3 0 013 3v1a3 3 0 01-3 3H3a3 3 0 01-3-3V3zm0 7a3 3 0 013-3h14a3 3 0 013 3v1a3 3 0 01-3 3H3a3 3 0 01-3-3v-1zm0 7a3 3 0 013-3h14a3 3 0 013 3v1a3 3 0 01-3 3H3a3 3 0 01-3-3v-1z" />
+                        </svg>
+                    </button>
+                </div>
+                <div id="menu" class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block">
+                    <div class="text-sm lg:flex-grow lg:text-right">
+                        <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600 mr-4">
+                            Home
+                        </a>
+                        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600 mr-4">
+                            About
+                        </a>
+                        <a href="#" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-indigo-600">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- =================== RESPONSIVE HEADER ========================= -->
+
+
+
+    <!-- ================== Responsive Hero ========================= -->
+    <section class="bg-gray-100 py-26">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-6">Welcome to My Blog</h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Nullam eu neque felis. In sit amet nulla at odio mollis iaculis. Suspendisse potenti. Nam
+                        convallis orci vel tincidunt maximus. Fusce auctor nunc at dolor rutrum, vel sagittis nulla
+                        eleifend.</p>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <img class="w-full h-auto rounded-lg shadow-lg" src="https://via.placeholder.com/800x600"
+                        alt="Blog Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================== Responsive Hero ========================= -->
+
+
+
+
+    <!-- ====================== Blog Section ===========================  -->
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Latest Blog Posts</h2>
+                <p class="text-xl text-gray-600 mb-8">Stay up-to-date with our latest blog posts.</p>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
+                        <a href="#">
+                            <img class="mb-6 rounded-md" src="https://via.placeholder.com/500x350"
+                                alt="Blog post image">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
+                        </a>
+                        <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
+                        <a href="#">
+                            <img class="mb-6 rounded-md" src="https://via.placeholder.com/500x350"
+                                alt="Blog post image">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
+                        </a>
+                        <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="bg-white border border-gray-300 shadow-md p-8 rounded-lg">
+                        <a href="#">
+                            <img class="mb-6 rounded-md" src="https://via.placeholder.com/500x350"
+                                alt="Blog post image">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Blog Post Title</h3>
+                        </a>
+                        <p class="text-lg text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================== Blog Section ===========================  -->
+
+
+    <!-- =================== Single Blog Section ========================= -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <img class="mb-8 rounded-md" src="https://via.placeholder.com/800x400" alt="Blog post image">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Blog Post Title</h1>
+                <p class="text-lg text-gray-600 mb-8">Written by <span class="font-bold">Author Name</span> on <span
+                        class="font-bold">Date</span></p>
+                <div class="prose max-w-none">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur.</p>
+                    <h2>Subheading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                    <ul>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                    </ul>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.</p>
+                    <h2>Conclusion</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =================== Single Blog Section ========================= -->
+
+    <!-- ================== Future Goal ================= -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">Our Future Goals</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Goal 1" class="w-20 h-20 mb-4 rounded-full">
+                    <h3 class="text-xl font-bold mb-2">Goal 1</h3>
+                    <p class="text-gray-700 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                        feugiat enim nec malesuada maximus.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Goal 2" class="w-20 h-20 mb-4 rounded-full">
+                    <h3 class="text-xl font-bold mb-2">Goal 2</h3>
+                    <p class="text-gray-700 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                        feugiat enim nec malesuada maximus.</p>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-6 flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Goal 3" class="w-20 h-20 mb-4 rounded-full">
+                    <h3 class="text-xl font-bold mb-2">Goal 3</h3>
+                    <p class="text-gray-700 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                        feugiat enim nec malesuada maximus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== Future Goal ================= -->
+
+
+    <!-- =================== CTA ================================= -->
+    <section class="bg-indigo-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <h2 class="text-3xl font-extrabold text-white mb-4 sm:mb-0">Subscribe to our Newsletter</h2>
+                <form class="w-full sm:w-auto lg:ml-8 flex flex-col sm:flex-row">
+                    <input type="email" placeholder="Enter your email"
+                        class="rounded-l-lg sm:rounded-l-none sm:rounded-r-none px-4 py-2 w-full sm:w-auto mb-4 sm:mb-0">
+                    <button
+                        class="bg-white text-indigo-900 rounded-r-lg sm:rounded-l-none sm:rounded-r-lg px-4 py-2 w-full sm:w-auto sm:ml-4">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- =================== CTA ================================= -->
+
+    <!-- ================= FEATURE =============================== -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Our Blogging Platform Offers the Following Features:
+                </p>
+            </div>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <div class="flex-shrink-0">
+                            <span
+                                class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <i class="fas fa-pen"></i>
+                            </span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Create and Manage Blog Posts</h3>
+                        <p class="mt-2 text-base text-gray-500">Easily create and publish blog posts, with rich text
+                            formatting and image uploads.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <div class="flex-shrink-0">
+                            <span
+                                class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <i class="fas fa-comments"></i>
+                            </span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Engage with Readers</h3>
+                        <p class="mt-2 text-base text-gray-500">Allow readers to leave comments on your blog posts, and
+                            reply to them.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <div class="flex-shrink-0">
+                            <span
+                                class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                                <i class="fas fa-chart-line"></i>
+                            </span>
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-gray-900">Track Your Blog's Performance</h3>
+                        <p class="mt-2 text-base text-gray-500">View analytics and insights on your blog's traffic,
+                            engagement, and more.</p>
+                    </div>
+                    <!-- more feature boxes here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURE =============================== -->
+
+
+    <!-- ======================= BLOG SECTION ========================== -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto px-2 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-semibold text-gray-800">Our Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+                <div class="flex flex-col justify-center items-center bg-white shadow-md rounded-lg">
+                    <div class="w-full">
+                        <img src="https://picsum.photos/id/1015/400/400" alt="Gallery Image" class="rounded-t-lg">
+                    </div>
+                    <div class="py-4 px-6 w-full">
+                        <h3 class="text-lg font-semibold mb-2">Image Title</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamus vel ultrices quam. Fusce at tristique massa. Nullam auctor, odio ac bibendum
+                            malesuada, ante sapien commodo orci, in pretium mi metus in tortor.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-md rounded-lg">
+                    <div class="w-full">
+                        <img src="https://picsum.photos/id/1025/400/400" alt="Gallery Image" class="rounded-t-lg">
+                    </div>
+                    <div class="py-4 px-6 w-full">
+                        <h3 class="text-lg font-semibold mb-2">Image Title</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamus vel ultrices quam. Fusce at tristique massa. Nullam auctor, odio ac bibendum
+                            malesuada, ante sapien commodo orci, in pretium mi metus in tortor.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-md rounded-lg">
+                    <div class="w-full">
+                        <img src="https://picsum.photos/id/1035/400/400" alt="Gallery Image" class="rounded-t-lg">
+                    </div>
+                    <div class="py-4 px-6 w-full">
+                        <h3 class="text-lg font-semibold mb-2">Image Title</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamus vel ultrices quam. Fusce at tristique massa. Nullam auctor, odio ac bibendum
+                            malesuada, ante sapien commodo orci, in pretium mi metus in tortor.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center items-center bg-white shadow-md rounded-lg">
+                    <div class="w-full">
+                        <img src="https://picsum.photos/id/1035/400/400" alt="Gallery Image" class="rounded-t-lg">
+                    </div>
+                    <div class="py-4 px-6 w-full">
+                        <h3 class="text-lg font-semibold mb-2">Image Title</h3>
+                        <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vivamus vel ultrices quam. Fusce at tristique massa. Nullam auctor, odio ac bibendum
+                            malesuada, ante sapien commodo orci, in pretium mi metus in tortor.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ======================= BLOG SECTION ========================== -->
+
+    <!-- ======================== Statistics ================================= -->
+    <section class="bg-gray-100">
+        <div class="container mx-auto py-12">
+          <h2 class="text-3xl font-bold text-center">Our Statistics</h2>
+          <div class="grid grid-cols-3 gap-4 mt-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="text-4xl font-bold text-blue-500">20K+</div>
+              <div class="text-lg font-medium text-gray-600">Monthly Visitors</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="text-4xl font-bold text-blue-500">100+</div>
+              <div class="text-lg font-medium text-gray-600">Blog Posts</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="text-4xl font-bold text-blue-500">50+</div>
+              <div class="text-lg font-medium text-gray-600">Authors</div>
+            </div>
+          </div>
+        </div>
+      </section>      
+    <!-- ======================== Statistics ================================= -->
+
+    <!-- ================== TEAM SECTION ===================================== -->
+    <section class="team-section">
+        <div class="row">
+          <div class="team-member">
+            <div class="tem_img">
+                <img src="https://images.unsplash.com/photo-1678541192455-e1e96bdf1b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Team Member 2">
+            </div>
+            <h3>John Doe</h3>
+            <p>Founder & CEO</p>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="tem_img">
+                <img src="https://images.unsplash.com/photo-1678541192455-e1e96bdf1b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Team Member 2">
+            </div>
+            <h3>Jane Smith</h3>
+            <p>Marketing Manager</p>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="tem_img">
+                <img src="https://images.unsplash.com/photo-1678541192455-e1e96bdf1b9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="Team Member 2">
+            </div>
+            <h3>David Lee</h3>
+            <p>Head of Development</p>
+            <div class="social-links">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- ================== TEAM SECTION ===================================== -->
+    
+
+
+    <!-- =========================== Testimonial ========================== -->
+    <section class="bg-gray-100 py-10">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-10 text-center">What Our Customers Say</h2>
+          <div class="flex flex-wrap justify-center items-center">
+            <div class="w-full md:w-1/2 lg:w-1/3 mb-10 px-5">
+              <div class="bg-white rounded-lg shadow-lg p-5 text-center">
+                <div class="text-3xl mb-5"><i class="fas fa-quote-left"></i></div>
+                <p class="text-gray-700 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h4 class="font-bold">John Doe</h4>
+                <p>CEO, ABC Company</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 mb-10 px-5">
+              <div class="bg-white rounded-lg shadow-lg p-5 text-center">
+                <div class="text-3xl mb-5"><i class="fas fa-quote-left"></i></div>
+                <p class="text-gray-700 mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                <h4 class="font-bold">Jane Doe</h4>
+                <p>CTO, XYZ Company</p>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 mb-10 px-5">
+              <div class="bg-white rounded-lg shadow-lg p-5 text-center">
+                <div class="text-3xl mb-5"><i class="fas fa-quote-left"></i></div>
+                <p class="text-gray-700 mb-5">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <h4 class="font-bold">Mark Smith</h4>
+                <p>Founder, DEF Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- =========================== Testimonial ========================== -->
+    
+
+    <!-- ==================== STEP ===================================== -->
+    <section class="bg-gray-100">
+        <div class="container mx-auto px-4 py-16">
+          <h2 class="text-4xl font-bold mb-8">Our Process</h2>
+          <div class="flex flex-wrap -mx-4">
+            <div class="md:w-1/3 px-4 mb-8">
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                  <i class="far fa-lightbulb text-2xl text-blue-500"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Step 1</h3>
+                  <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/3 px-4 mb-8">
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                  <i class="fas fa-pencil-alt text-2xl text-blue-500"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Step 2</h3>
+                  <p class="text-gray-600">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/3 px-4 mb-8">
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mr-4">
+                  <i class="far fa-thumbs-up text-2xl text-blue-500"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-2">Step 3</h3>
+                  <p class="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========================== STEP ======================================  -->
+
+    <!-- ================== Services ================================ -->
+    <section class="bg-gray-200 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                    neque felis. In sit amet nulla at odio mollis iaculis.</p>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <i class="fas fa-laptop-code text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Web Development</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                            neque felis.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <i class="fas fa-mobile-alt text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mobile App Development</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                            neque felis.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <i class="fas fa-search-dollar text-4xl text-gray-800 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">SEO &amp; Digital Marketing</h3>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                            neque felis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================== Services ================================ -->
+
+
+
+    <!-- ================== SIGN IN =============================== -->
+    <div class="flex justify-center items-center bg-gray-100 min-h-screen">
+        <div class="max-w-md w-full px-6 py-8 bg-white rounded-lg shadow-md">
+          <div class="text-center">
+            <h1 class="text-2xl font-medium text-gray-900">Sign in to your account</h1>
+            <p class="mt-2 text-sm text-gray-600">Or <a href="#" class="underline">create a new account</a></p>
+          </div>
+          <form class="mt-4">
+            <div>
+              <label class="block text-gray-700 font-semibold mb-2">Email Address</label>
+              <input type="email" class="block w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:border-indigo-500" required>
+            </div>
+            <div class="mt-4">
+              <label class="block text-gray-700 font-semibold mb-2">Password</label>
+              <input type="password" class="block w-full p-3 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:border-indigo-500" required>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-indigo-600">
+                <span class="ml-2 text-gray-700">Remember me</span>
+              </label>
+              <a href="#" class="text-sm text-indigo-600 hover:text-indigo-500">Forgot your password?</a>
+            </div>
+            <div class="mt-6">
+              <button type="submit" class="w-full py-3 rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Sign In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    <!-- ================== SIGN IN =============================== -->
+    
+    <!-- =================== Sign up =================================== -->
+    <div class="flex flex-col mx-auto w-full md:w-1/2 lg:w-1/3 p-4 rounded-md bg-white">
+        <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
+        <form class="flex flex-col space-y-4">
+          <label class="text-gray-600">Full Name</label>
+          <input type="text" name="full_name" placeholder="Enter your full name" class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" required>
+      
+          <label class="text-gray-600">Email Address</label>
+          <input type="email" name="email" placeholder="Enter your email address" class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" required>
+      
+          <label class="text-gray-600">Password</label>
+          <input type="password" name="password" placeholder="Enter your password" class="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500" required>
+      
+          <button type="submit" class="bg-blue-500 text-white rounded-md py-2 hover:bg-blue-600">Sign Up</button>
+        </form>
+      </div>
+      
+    <!-- =================== Sign up =================================== -->
+    
+
+    <!-- ================= Feed Back Section ============================ -->
+    <section class="bg-gray-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">We'd love to hear from you!</h2>
+            <p class="text-gray-600 mb-8">Leave us a message and we'll get back to you as soon as possible.</p>
+          </div>
+          <div class="max-w-xl mx-auto bg-white shadow-md rounded px-8 py-6">
+            <form action="#" method="POST">
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your email address">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="message">
+                  Message
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="5" placeholder="Your message"></textarea>
+              </div>
+              <div class="flex justify-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      
+    <!-- ================= Feed Back Section ============================ -->
+    
+
+    <!-- ================= Contact =================================== -->
+    <section class="bg-gray-200 py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+                    neque felis. In sit amet nulla at odio mollis iaculis.</p>
+            </div>
+            <form class="max-w-lg mx-auto">
+                <div class="mb-6">
+                    <label class="block font-bold mb-2 text-gray-800" for="name">Name</label>
+                    <input
+                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+                        id="name" type="text" placeholder="John Doe">
+                </div>
+                <div class="mb-6">
+                    <label class="block font-bold mb-2 text-gray-800" for="email">Email</label>
+                    <input
+                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+                        id="email" type="email" placeholder="johndoe@example.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block font-bold mb-2 text-gray-800" for="message">Message</label>
+                    <textarea
+                        class="appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-800 leading-tight focus:outline-none focus:border-blue-500"
+                        id="message" placeholder="Enter your message here"></textarea>
+                </div>
+                <div class="text-center">
+                    <button
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ================= Contact =================================== -->
+
+
+    <!-- ================= About Section =========================== -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="md:flex md:items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+                    <p class="text-xl text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam eu neque felis. In sit amet nulla at odio mollis iaculis.</p>
+                    <p class="text-xl text-gray-600 mb-8">Sed eget feugiat felis, eget consequat erat. Donec efficitur
+                        mauris eu nisl fringilla, in laoreet odio dapibus.</p>
+                    <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        href="#">Learn More</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img class="w-full h-auto" src="https://picsum.photos/id/1005/600/400" alt="About Us Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================= About Section =========================== -->
+
+
+    <!-- ================= PRICING ================================= -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Pricing</h2>
+                <p class="text-xl text-gray-600 mb-8">Choose a plan that works for you.</p>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="border border-gray-300 shadow-md p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Starter</h3>
+                        <p class="text-xl text-gray-600 mb-4">$10/month</p>
+                        <ul class="text-lg text-gray-600 mb-8">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                        </ul>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="border border-blue-500 shadow-md p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Pro</h3>
+                        <p class="text-xl text-gray-600 mb-4">$20/month</p>
+                        <ul class="text-lg text-gray-600 mb-8">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                            <li>Feature 5</li>
+                        </ul>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Get Started</a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 px-4 mb-8">
+                    <div class="border border-gray-300 shadow-md p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Premium</h3>
+                        <p class="text-xl text-gray-600 mb-4">$30/month</p>
+                        <ul class="text-lg text-gray-600 mb-8">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                            <li>Feature 3</li>
+                            <li>Feature 4</li>
+                            <li>Feature 5</li>
+                            <li>Feature 6</li>
+                            <li>Feature 7</li>
+                        </ul>
+                        <a class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            href="#">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRICING ================================= -->
+
+
+
+    <!-- ==================== FOOTER SECTION =============================== -->
+    <footer class="bg-gray-800 text-gray-400">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid md:grid-cols-3 gap-4">
+                <div>
+                    <h2 class="text-xl font-bold mb-4">About Us</h2>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <ul>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mission</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Vision</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Values</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Recent Posts</h2>
+                    <ul>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Post 1</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Post 2</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Post 3</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+                    <p class="mb-4">123 Main St</p>
+                    <p class="mb-4">Email: info@example.com</p>
+                    <p class="mb-4">Phone: 555-555-5555</p>
+                </div>
+            </div>
+            <hr class="my-8 border-gray-700">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 My Blog. All rights reserved.</p>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Terms</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Privacy</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FOOTER SECTION =============================== -->
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
